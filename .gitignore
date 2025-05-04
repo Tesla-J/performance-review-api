@@ -1,0 +1,15 @@
+# Docker
+.env
+.env.prod
+docker-compose.override.yml
+
+# Gradle/Kotlin
+.gradle
+build/
+!gradle/wrapper/gradle-wrapper.jar
+out/
+
+# IntelliJ
+.idea
+*.iml
+*.ipr

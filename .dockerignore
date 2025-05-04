@@ -1,0 +1,11 @@
+.git
+.idea
+*.iml
+target/
+build/
+out/
+*.log
+*.md
+Dockerfile*
+docker-compose*
+.gitignore
