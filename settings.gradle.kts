@@ -1,1 +1,1 @@
-rootProject.name = "performance-review-api"
+rootProject.name = "performance-review2"

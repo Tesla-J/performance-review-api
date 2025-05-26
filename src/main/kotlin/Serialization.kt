@@ -13,17 +13,10 @@ import java.sql.Connection
 import java.sql.DriverManager
 import org.jetbrains.exposed.sql.*
 
-fun Application.configureRouting() {
-    install(StatusPages) {
-        exception<Throwable> { call, cause ->
-            call.respondText(text = "500: $cause" , status = HttpStatusCode.InternalServerError)
-        }
-    }
+fun Application.configureSerialization() {
     routing {
-        get("/") {
-            call.respondText("Hello World!")
-        }
-        // Static plugin. Try to access `/static/index.html`
-        staticResources("/static", "static")
+        get("/json/kotlinx-serialization") {
+                call.respond(mapOf("hello" to "world"))
+            }
     }
 }
