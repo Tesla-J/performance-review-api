@@ -10,6 +10,7 @@ enum class GoalState {
     PENDING,
 }
 
+@Serializable
 data class Goal (
     val id: Long,
     val title: String,

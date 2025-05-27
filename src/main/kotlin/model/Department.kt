@@ -2,6 +2,7 @@ package dev.rmarcos.model
 
 import kotlinx.serialization.Serializable
 
+@Serializable
 data class Department (
     val id: Long,
     val name: String,
