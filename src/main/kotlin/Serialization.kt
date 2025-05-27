@@ -14,9 +14,12 @@ import java.sql.DriverManager
 import org.jetbrains.exposed.sql.*
 
 fun Application.configureSerialization() {
-    routing {
-        get("/json/kotlinx-serialization") {
-                call.respond(mapOf("hello" to "world"))
-            }
+    install(ContentNegotiation) {
+        json()
     }
+//    routing {
+//        get("/json/kotlinx-serialization") {
+//                call.respond(mapOf("hello" to "world"))
+//            }
+//    }
 }
