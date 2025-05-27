@@ -1,5 +1,6 @@
 package dev.rmarcos.model
 
+import kotlinx.serialization.Contextual
 import kotlinx.serialization.Serializable
 import java.time.LocalDate
 
@@ -8,6 +9,6 @@ data class Assessment (
     val id: Long,
     val developmentPlan: DevelopmentPlan,
     val score: Int,
-    val date: LocalDate,
+    @Contextual val date: LocalDate,
     val minimalSuccessScore: Int,
 )
